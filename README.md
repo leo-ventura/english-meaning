@@ -12,10 +12,14 @@ Since it's written in python, you have to have python installed on your machine.
 <code>cd english-meaning</code>
 
 <p> Finally, the command to run the program is: </p>
-<code> python merriam-webster.py [word] </code>
+<code> python merriam-webster.py <word> </code>
   <p>where <code>word</code> is the word that you want to know the meaning.</p>
 <hr></hr>
 
 <h1> About Licenses </h1>
 According to Merriam-Webster API page: "The Merriam-Webster Dictionary API is free as long as it is for non-commercial use, usage does not exceed 1000 queries per day per API key, and use is limited to two reference APIs."
 Although this python code is not an API, I'm not developing this for commercial use. So, I'm publishing this JUST FOR purpose of education.
+
+<h1> Final considerations </h1>
+This project is aimed at Merriam-Webster but you can change the website on the source code to any dictionary you want, just make sure you're using the correct path (e.g. https://www.merriam-webster.com/dictionary/) since our <word> will come after the "/"
+. You can assure that by typing any english word you want to know the meaning after that slash.
