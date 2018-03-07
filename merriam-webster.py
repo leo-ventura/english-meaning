@@ -10,19 +10,16 @@ def getPageContent(url):
 
 def word():
     word = ""
-    i = 1
-    while(i <= len(sys.argv)-2):
-        word += sys.argv[i] +"-"
-        i+=1
-    word += sys.argv[i]
+    for w in sys.argv[1:]:
+        word += w
     return word
 
 response = getPageContent("https://www.merriam-webster.com/dictionary/" + word())
 
 print "[looking for the meaning...]"
-for i in range(len(response)):
-    if '<meta name="description"' in response[i]:
+for r in response:
+    if '<meta name="description"' in r:
         try:
-            print "Meaning of", word(), ":", response[i].split(':')[1][1:]
+            print "Meaning of", word(), ":", r.split(':')[1][1:]
         except:
             print "Couldn't find your word on the website"
